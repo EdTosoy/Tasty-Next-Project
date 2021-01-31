@@ -9,7 +9,7 @@ export default function Hero() {
           <h1 className="text-green  font-semibold text-4xl md:text-6xl  mb-10">
             Tasty food
           </h1>
-          <h2 className="text-gray-800 text-3xl font-semibold md:text-4xl mb-10">
+          <h2 className="text-gray-800 dark:text-white text-3xl font-semibold md:text-4xl mb-10">
             Try the best food of the week.
           </h2>
           <button className="p-3 rounded-md bg-green text-white hover:bg-dark-green">

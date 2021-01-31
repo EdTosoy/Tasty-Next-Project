@@ -6,7 +6,7 @@ export default function About() {
         <div className="md:mr-auto   md:w-1/2 flex items-center ml-4 md:max-w-sm">
           <div className="text-center  md:text-left">
             <h2 className="text-green text-lg font-semibold mb-8 ">About Us</h2>
-            <h1 className="font-bold text-gray-800 text-2xl md:text-4xl md:font-semibold mb-8 ">
+            <h1 className="font-bold text-gray-800 dark:text-white text-2xl md:text-4xl md:font-semibold mb-8 ">
               We cook the best tasty food
             </h1>
             <p className="font-medium mb-8  ">

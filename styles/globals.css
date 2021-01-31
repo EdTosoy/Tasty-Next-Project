@@ -18,7 +18,6 @@ a {
 }
 
 * {
-  color: #707070;
   scroll-behavior: smooth;
   /* border: 1px dashed green; */
   box-sizing: border-box;

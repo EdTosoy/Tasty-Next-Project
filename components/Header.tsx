@@ -1,3 +1,6 @@
+import { useContext } from "react";
+import { DarkModeContext } from "../ContextAPI/darkMode";
+
 export default function Header() {
   const nav = [
     {
@@ -22,9 +25,11 @@ export default function Header() {
     },
   ];
 
+  const { darkmode, setDarkmode } = useContext(DarkModeContext);
+
   return (
-    <header className="border-b mx-4 sticky top-0 z-10">
-      <div className="flex py-3  md:py-7 max-w-screen-lg mx-auto justify-between  font-medium  bg-white ">
+    <header className={`max-w-screen-2xl border-b dark:border-gray-800 mx-4 sticky top-0 z-50`}>
+      <div className="flex py-3 w-full md:py-7 max-w-screen-lg mx-auto justify-between  font-medium  bg-white dark:bg-DarkModegreen ">
         <div className="">
           <a href="#" className="hover:text-green ligther">
             Tasty
@@ -38,8 +43,27 @@ export default function Header() {
               </a>
             </nav>
           ))}
+
+          <div
+            className="cursor-pointer"
+            onClick={() => setDarkmode((prev) => !prev)}
+          >
+            {darkmode ? (
+              <box-icon
+                name="certification"
+                color="white"
+              ></box-icon>
+            ) : (
+              <box-icon name="moon"></box-icon>
+            )}
+          </div>
+
           <div className="md:hidden">
-            <box-icon name="menu" color="gray" onClick={()=> console.log("fire")} />
+            <box-icon
+              name="menu"
+              color="gray"
+              onClick={() => console.log("fire")}
+            />
           </div>
         </div>
       </div>
