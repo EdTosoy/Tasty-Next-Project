@@ -2,11 +2,13 @@
 import type { AppProps /*, AppContext */ } from "next/app";
 import "tailwindcss/tailwind.css";
 import "../styles/globals.css";
-
+import Head from "next/head";
 function MyApp({ Component, pageProps }: AppProps) {
+  <Head>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width" />;
+  </Head>;
   return <Component {...pageProps} />;
 }
-
 
 // Only uncomment this method if you have blocking data requirements for
 // every single page in your application. This disables the ability to

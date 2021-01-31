@@ -16,8 +16,8 @@ export default function Hero() {
             View Menu
           </button>
         </div>
-        <div className="relative  ">
-          <Image src="/images/home.png" width={488} height={488} />
+        <div className="">
+          <Image src="/images/home.png" width={488} height={488} alt="hero" />
         </div>
       </div>
     </main>

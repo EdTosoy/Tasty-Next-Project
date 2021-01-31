@@ -14,11 +14,11 @@ export default function App() {
               Find our application and download it, you can make reservations,
               food orders, see your deliveries on the way and much more.
             </p>
-            <button className="my-3 mr-3">
-              <Image src="/images/app1.png" width={150} height={40} />
+            <button className="my-3 mr-3" aria-label="download app" >
+              <Image src="/images/app1.png" width={150} height={40} alt="app1" />
             </button>
-            <button className="my-3 mr-3">
-              <Image src="/images/app2.png" width={150} height={40} />
+            <button className="my-3 mr-3" aria-label="download app" >
+              <Image src="/images/app2.png" width={150} height={40}  alt="app2" />
             </button>
           </div>
         </div>

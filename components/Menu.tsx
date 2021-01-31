@@ -44,7 +44,7 @@ export default function Menu() {
               </h2>
               <p className="mb-2">{text}</p>
               <p className="font-semibold dark:text-white    ">${price}</p>
-              <button className="bottom-0 right-0 absolute p-3 bg-green rounded-tl-xl rounded-br-xl hover:bg-dark-green" ><box-icon name='cart-alt' color="white" ></box-icon></button>
+              <button className="bottom-0 right-0 absolute p-3 bg-green rounded-tl-xl rounded-br-xl hover:bg-dark-green" aria-label="cart"  ><box-icon name='cart-alt' color="white" ></box-icon></button>
             </div>
           ))}
         </div>

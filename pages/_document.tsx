@@ -14,14 +14,17 @@ class MyDocument extends Document {
   }
   render() {
     return (
-      <Html>
+      <Html lang="en">
         <Head>
-          <script src="https://unpkg.com/boxicons@latest/dist/boxicons.js"></script>
+          <meta charSet="UTF-8" />
+          <link rel="icon" href="/favicon.ico" />
+          <meta name="author" content="Ed Tosoy" />
         </Head>
         <body>
           <Main />
           <NextScript />
         </body>
+        <script src="https://unpkg.com/boxicons@latest/dist/boxicons.js"></script>
       </Html>
     );
   }

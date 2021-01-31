@@ -61,7 +61,6 @@ export default function Header() {
             <box-icon
               name="menu"
               color="gray"
-              onClick={() => console.log("fire")}
             />
           </div>
         </div>

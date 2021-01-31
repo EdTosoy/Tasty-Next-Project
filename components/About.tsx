@@ -19,7 +19,7 @@ export default function About() {
           </div>
         </div>
         <div className="md:mr-auto mx-10 grid place-content-center w-5/6 md:w-2/5 h-96 relative">
-          <Image src="/images/about.jpg" className="rounded-xl" layout="fill" />
+          <Image src="/images/about.jpg" className="rounded-xl" layout="fill" alt="about" />
         </div>
       </main>
     </div>

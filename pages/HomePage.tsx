@@ -11,9 +11,9 @@ import Header from "../components/Header";
 
 export default function HomePage() {
   const { darkmode } = useContext(DarkModeContext);
-  console.log(darkmode);
   return (
     <div className={darkmode ? `dark text-gray-400 bg-DarkModegreen` : `text-gray-600`}>
+      
       <Header />
       <Hero />
       <About />
