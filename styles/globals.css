@@ -31,7 +31,6 @@ a {
 
 .grid-container {
   display: grid;
-  width: 100vw;
   grid-template-columns:
     minmax(1rem, 1fr)
     minmax(1rem, 1024px)

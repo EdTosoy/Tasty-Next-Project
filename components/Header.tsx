@@ -28,7 +28,9 @@ export default function Header() {
   const { darkmode, setDarkmode } = useContext(DarkModeContext);
 
   return (
-    <header className={`max-w-screen-2xl border-b dark:border-gray-800 mx-4 sticky top-0 z-50`}>
+    <header
+      className={`max-w-screen-2xl border-b dark:border-gray-800 mx-4 sticky top-0 z-50`}
+    >
       <div className="flex py-3 w-full md:py-7 max-w-screen-lg mx-auto justify-between  font-medium  bg-white dark:bg-DarkModegreen ">
         <div className="">
           <a href="#" className="hover:text-green ligther">
@@ -37,7 +39,7 @@ export default function Header() {
         </div>
         <div className="flex  gap-10">
           {nav.map(({ id, name }) => (
-            <nav className="text-base hidden md:block ">
+            <nav key={id} className="text-base hidden md:block ">
               <a href={`#${id}`} className=" hover:text-green">
                 {name}
               </a>
@@ -49,10 +51,7 @@ export default function Header() {
             onClick={() => setDarkmode((prev) => !prev)}
           >
             {darkmode ? (
-              <box-icon
-                name="certification"
-                color="white"
-              ></box-icon>
+              <box-icon name="certification" color="white"></box-icon>
             ) : (
               <box-icon name="moon"></box-icon>
             )}
