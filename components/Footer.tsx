@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { DarkModeContext } from "../ContextAPI/darkMode";
+import { AppContext } from "../ContextAPI/appContext";
 
 const footerLink = [
   {
@@ -26,7 +26,7 @@ const footerLink = [
 ];
 
 export default function Footer() {
-  const { darkmode } = useContext(DarkModeContext);
+  const { darkmode } = useContext(AppContext);
   return (
     <div className="grid-container pt-36 pb-8" id="about">
       <main className="col-start-2 col-end-3 px-12">
@@ -58,15 +58,23 @@ export default function Footer() {
               </div>
             </div>
           </div>
-          {footerLink.map(({ title, sub1, sub2, sub3, sub4 }) => (
-            <div className="mb-4">
+          {footerLink.map(({ title, sub1, sub2, sub3, sub4 }, index) => (
+            <div className="mb-4" key={index}>
               <h1 className="text-2xl font-semibold mb-4 text-gray-800 dark:text-white">
                 {title}
               </h1>
-              <p className="mb-2"><a href="#">{sub1}</a></p>
-              <p className="mb-2"><a href="#">{sub2}</a></p>
-              <p className="mb-2"><a href="#">{sub3}</a></p>
-              <p className="mb-2"><a href="#">{sub4}</a></p>
+              <p className="mb-2">
+                <a href="#">{sub1}</a>
+              </p>
+              <p className="mb-2">
+                <a href="#">{sub2}</a>
+              </p>
+              <p className="mb-2">
+                <a href="#">{sub3}</a>
+              </p>
+              <p className="mb-2">
+                <a href="#">{sub4}</a>
+              </p>
             </div>
           ))}
         </div>

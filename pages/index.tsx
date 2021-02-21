@@ -1,10 +1,10 @@
 import HomePage from "./HomePage";
-import { DarkModeProvider } from "../ContextAPI/darkMode";
-import Head from 'next/head';
+import { AppProvider } from "../ContextAPI/appContext";
+import Head from "next/head";
 
 export default function Home() {
   return (
-    <DarkModeProvider>
+    <AppProvider>
       <Head>
         <title>Tasty</title>
         <meta
@@ -14,6 +14,6 @@ export default function Home() {
         />
       </Head>
       <HomePage />
-    </DarkModeProvider>
+    </AppProvider>
   );
 }

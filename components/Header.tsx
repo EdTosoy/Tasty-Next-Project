@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { DarkModeContext } from "../ContextAPI/darkMode";
+import { AppContext } from "../ContextAPI/appContext";
 
 export default function Header() {
   const nav = [
@@ -25,18 +25,41 @@ export default function Header() {
     },
   ];
 
-  const { darkmode, setDarkmode } = useContext(DarkModeContext);
+  const { darkmode, setDarkmode, openMenu, setOpenMenu } = useContext(
+    AppContext
+  );
 
   return (
     <header
-      className={`max-w-screen-2xl border-b dark:border-gray-800 mx-4 sticky top-0 z-50`}
+      className={`max-w-screen-2xl border-b dark:border-gray-800 mx-4 sticky top-0 z-50 `}
     >
+      {openMenu && (
+        <div className="col-start-1  col-end-4">
+          <div className="top-14 border-t border-b shadow-xl absolute w-full  text-center  p-6 bg-white dark:border-gray-800 dark:bg-DarkModegreen  ">
+            {nav.map(({ name, id }) => (
+              <a
+                href={`#${id}`}
+                key={name}
+                onClick={() => {
+                  setOpenMenu((prev) => !prev);
+                  console.log(openMenu);
+                }}
+              >
+                <nav className="cursor-pointer navigation my-4 hover:text-green ">
+                  {name}
+                </nav>
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
       <div className="flex py-3 w-full md:py-7 max-w-screen-lg mx-auto justify-between  font-medium  bg-white dark:bg-DarkModegreen ">
         <div className="">
-          <a href="#" className="hover:text-green ligther">
+          <a href="#" className="hover:text-green ">
             Tasty
           </a>
         </div>
+
         <div className="flex  gap-10">
           {nav.map(({ id, name }) => (
             <nav key={id} className="text-base hidden md:block ">
@@ -57,11 +80,14 @@ export default function Header() {
             )}
           </div>
 
-          <div className="md:hidden">
-            <box-icon
-              name="menu"
-              color="gray"
-            />
+          <div
+            className="md:hidden cursor-pointer  "
+            onClick={() => {
+              setOpenMenu((prev) => !prev);
+              console.log(openMenu);
+            }}
+          >
+            <box-icon name="menu" color="gray" />
           </div>
         </div>
       </div>

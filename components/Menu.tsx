@@ -1,4 +1,3 @@
-import { DarkModeContext } from "../ContextAPI/darkMode";
 import Image from "next/image";
 import { useContext } from "react";
 const menu = [
