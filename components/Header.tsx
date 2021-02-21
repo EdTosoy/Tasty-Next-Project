@@ -34,7 +34,7 @@ export default function Header() {
       className={`max-w-screen-2xl border-b dark:border-gray-800 mx-4 sticky top-0 z-50 `}
     >
       {openMenu && (
-        <div className="col-start-1  col-end-4">
+        <div className="col-start-1  col-end- md:hidden">
           <div className="top-14 border-t border-b shadow-xl absolute w-full  text-center  p-6 bg-white dark:border-gray-800 dark:bg-DarkModegreen  ">
             {nav.map(({ name, id }) => (
               <a
